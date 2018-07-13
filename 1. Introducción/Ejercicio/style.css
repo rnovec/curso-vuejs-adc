@@ -1,0 +1,9 @@
+/*
+    Clase que servirá para aplicar un estilo 
+    marcando una tarea como terminada.
+*/
+
+.terminada {
+    color: gray;
+    text-decoration: line-through;
+}

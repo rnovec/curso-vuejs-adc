@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div :class="jumbo">
+
+        <div class="input-group mb-3">
+          <input type="text" @keyup.space="agregarUsuario" class="form-control" placeholder="username" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" v-on:click="agregarUsuario" type="button">Agregar</button>
+          </div>
+        </div>
+
+        <table class="table table-sm table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th v-for="titulos in cabecera">{{titulos}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(usuario,index) in usuarios">
+              <td>{{index +1}}</td>
+              <td v-for="datos,prop in usuario" @mouseover="mostrarNombre(datos,$event)">{{datos}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <span :class="{ocultar: mostrar}">{{x}}</span> +
+        <span class="badge badge-danger">{{y}}</span> =
+        <span class="badge badge-info">{{total}}</span>
+        <!--<a href="/documento.pdf " @click.prevent="alerta" class="badge badge-secondary">Descarga el pdf</a>-->
+
+        <!--<table-component></table-component>-->
+      </div>
+      <button type="button" @click="x++" class="btn btn-primary">Aumentar X</button>
+      <button type="button" @click="y*=2" class="btn btn-info">Aumentar Y</button>
+    </div>
+  </div>
+  <style>
+      .ocultar {
+        display: none;
+      }
+  </style>
+  <script src="vue.js"></script>
+</body>
+
+</html>

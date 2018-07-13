@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div :class="jumbo">
+
+        <div class="input-group mb-3">
+          <input type="text" v-model="nombre" @keyup.space="agregarUsuario" class="form-control" placeholder="username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" v-on:click="agregarUsuario" type="button">Agregar</button>
+          </div>
+        </div>
+
+        <table class="table table-sm table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th v-for="titulos in cabecera">{{titulos}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(usuario,index) in usuarios">
+              <td>{{index}}</td>
+              <td v-for="datos,prop in usuario" @mouseover="mostrarNombre(datos,$event)">{{datos}} </td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="badge badge-info">{{nombre}}</span>
+        <span class="badge badge-success">{{x}}</span>
+        <span class="badge badge-danger">{{y}}</span>
+        <a href="/documento.pdf " @click.prevent="alerta" class="badge badge-secondary">Descarga el pdf</a>
+
+        <!--<table-component></table-component>-->
+      </div>
+    </div>
+  </div>
+  <script src="vue.js"></script>
+</body>
+
+</html>
