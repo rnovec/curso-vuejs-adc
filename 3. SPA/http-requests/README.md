@@ -1,4 +1,4 @@
-# formularios
+# Peticiones HTTP
 
 > A Vue.js project
 
