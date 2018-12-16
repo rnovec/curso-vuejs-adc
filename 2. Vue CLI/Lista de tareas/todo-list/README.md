@@ -17,6 +17,8 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+How to start on template [webpack template](https://github.com/vuejs-templates/webpack)
+
 
 ## Estructura del Proyecto
 
