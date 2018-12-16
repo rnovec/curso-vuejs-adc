@@ -34,12 +34,15 @@
             </tr>
           </tbody>
         </table>
-        <span :class="{ocultar: mostrar}">{{x}}</span> +
+        <!-- Computed properties: En multiples ocasiones tendremos la necesidad de que cuando el valor de algun dato cambie este se refresque 
+        instantaneamente y usar metodos y eventos para estar en escucha de estos cambios es demasiado engorroso. Para ello tenemos un hook llamado
+        computed para realizar esta tarea. Checa el archivo vue.js -->
+        <span class="badge badge-success">{{x}}</span> +
         <span class="badge badge-danger">{{y}}</span> =
         <span class="badge badge-info">{{total}}</span>
-        <!--<a href="/documento.pdf " @click.prevent="alerta" class="badge badge-secondary">Descarga el pdf</a>-->
 
-        <!--<table-component></table-component>-->
+        <!-- TAREA: Investigar sobre el hook watch y para qué sirve. https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property -->
+        
       </div>
       <button type="button" @click="x++" class="btn btn-primary">Aumentar X</button>
       <button type="button" @click="y*=2" class="btn btn-info">Aumentar Y</button>

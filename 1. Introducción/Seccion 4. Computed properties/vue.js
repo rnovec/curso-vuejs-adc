@@ -75,9 +75,10 @@ var app = new Vue({
 
 
     },
+    // computed esta en escucha si alguna de las variables en cuestion cambia entonces las refresca
     computed: {
         total() {
-            return this.x + this.y
+            return this.x + this.y // todos los metodos en computed deben regresar alguna variable de la instancia
         }
     },
     methods: {
