@@ -1,7 +1,7 @@
 <template>
     <ul class="list-group">
             <li v-for="(tarea, indice) of tareas" class="list-group-item" 
-               v-bind:class="{terminada: tarea.terminada }">
+               v-bind:class="{terminada: tarea.terminada }" :key="indice">
                 {{ tarea.texto }}
                 <span class="pull-right">
                     <button type="button" class="btn btn-success btn-xs glyphicon glyphicon-ok"
