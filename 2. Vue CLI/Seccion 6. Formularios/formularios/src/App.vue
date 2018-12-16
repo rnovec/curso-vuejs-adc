@@ -31,7 +31,7 @@
         <div class="form-group">
           <label for="pais">Pais</label>
           <select class="form-control" v-model="usuario.pais">
-            <option v-for="pais in paises">{{ pais }}</option>
+            <option v-for="pais in paises" :key="pais">{{ pais }}</option>
           </select>
         </div>
 

@@ -1,6 +1,6 @@
-# formularios
+# Formularios
 
-> A Vue.js project
+> Los formularios son quiza el elemento HTML más usado en la web. Nos sirve para todo. Y la directiva asociada al manejo de formularios en Vue es [`v-model`](https://vuejs.org/v2/guide/forms.html).
 
 ## Build Setup
 
