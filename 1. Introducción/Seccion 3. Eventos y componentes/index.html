@@ -36,9 +36,15 @@
         <span class="badge badge-info">{{nombre}}</span>
         <span class="badge badge-success">{{x}}</span>
         <span class="badge badge-danger">{{y}}</span>
+
+        <!-- Eventos: Los eventos son todas aquellas acciones que realiza el usuario desde hacer un click, hmover el  mouse o apretar un boton del teclado.
+        Todos esos eventos pueden ser interceptados para realizar alguna accion.
+        la directiva que se encarga de escuchar estos eventos es v-on y su forma corta es @.
+        Uno de los eventos más importantes el es evento click y tambien podemos controlar su comportamiento mediante algo
+        conocido como Modificares de eventos. Lista completa de modificares: https://es-vuejs.github.io/vuejs.org/v2/guide/events.html#Modificadores-de-eventos -->
+        
         <a href="/documento.pdf " @click.prevent="alerta" class="badge badge-secondary">Descarga el pdf</a>
 
-        <!--<table-component></table-component>-->
       </div>
     </div>
   </div>

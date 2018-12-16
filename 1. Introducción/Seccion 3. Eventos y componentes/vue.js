@@ -33,12 +33,12 @@ Vue.component('table-component', {
     `,
     data: function () {
         return {
-            
+
         }
     }
 })
 
-var app = new Vue ({
+var app = new Vue({
     el: '#app',
     data: {
         titulo: 'Bienvenido al curso de Vue jS 2 - ADC',
@@ -50,7 +50,7 @@ var app = new Vue ({
              amet porro animi. Similique maiores exercitationem 
              libero ducimus quis rerum obcaecati ut, quibusdam magni
               nisi maxime molestiae optio dignissimos?</p>`,
-        cabecera:['#','Nombre','Correo','Telefono'],
+        cabecera: ['#', 'Nombre', 'Correo', 'Telefono'],
         usuarios: [
             {
                 nombre: 'Jordan',
@@ -67,37 +67,35 @@ var app = new Vue ({
                 correo: 'Raul@gmail.com',
                 telefono: 99926112233
             }
-            
+
         ],
-        nombre:'',
-        x:0,
-        y:0
-    
-        
+        nombre: '',
+        x: 0,
+        y: 0
+
+
     },
     methods: {
-        mostrarTitulo () {
+        mostrarTitulo() {
             return 'Introducción a Vue con ADC'
         },
-        agregarUsuario(){
-            if(this.nombre) {
-               this.usuarios.push(
-                   {nombre: this.nombre , correo: 'ejemplo@hotmail.com', telefono:99999999 }
-               )
+        agregarUsuario() {
+            if (this.nombre) {
+                this.usuarios.push(
+                    { nombre: this.nombre, correo: 'ejemplo@hotmail.com', telefono: 99999999 }
+                )
             }
         },
-        mostrarNombre(nombre,event){
+        // Manera de recibir un evento del cliente
+        mostrarNombre(nombre, event) {
             this.nombre = nombre
-            this.x = event.clientX
-            this.y =event.clientY
+            this.x = event.clientX // Obtener la posicón en X del puntero/mouse
+            this.y = event.clientY// Obtener la posicón en Y del puntero/mouse
             console.log(event)
         },
-        alerta()
-        {
+        alerta() {
             alert('has dado click')
         }
-
-
     },
     beforeCreate() {
         console.log('Antes de crear')
@@ -110,7 +108,7 @@ var app = new Vue ({
         console.log('Antes de montar')
     },
     mounted() {
-        console.log('Montada')        
+        console.log('Montada')
     },
     beforeUpdate() {
         console.log('Antes de actualizar')
