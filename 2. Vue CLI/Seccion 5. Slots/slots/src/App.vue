@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import MostrarFormulario from './MostrarFormulario'
-import IniciarSesion from './IniciarSesion'
-import CambiarClave from './CambiarClave'
+import MostrarFormulario from './components/MostrarFormulario'
+import IniciarSesion from './components/IniciarSesion'
+import CambiarClave from './components/CambiarClave'
 export default {
   components: {
     mostrarFormulario: MostrarFormulario,

@@ -1,6 +1,6 @@
-# myapp
+# Slots
 
-> Vue CLI
+> Los slots nos ayudan a reciclar componentes de Vue. Podemos crear nuestras propias plantillas apartir de otros componentes y no repetir codigo innecesario o bien para dividir grandes componentes en otros más pequeños para hacer el código más legible. Si quieres saber más te recomiendo que vayas por [aquí](https://vuejs.org/v2/guide/components-slots.html).
 
 ## Build Setup
 
