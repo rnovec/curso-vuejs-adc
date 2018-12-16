@@ -1,3 +1,4 @@
+// Declaración de un componente con su plantilla html correspondiente
 Vue.component('table-component', {
     template: `
     <table class="table table-sm table-striped">
@@ -36,22 +37,30 @@ Vue.component('table-component', {
   },
 })
 
+/**
+ * Aqui inicia nuestra instancia de Vue
+ */
 var app = new Vue({
-    el: '#app',
-    data: {
+    el: '#app', // indica el <div> en el cual queremos utilizar vue class: `#app` o id: `.app`
+    data: { // hook mas importante, retorna las variables de nuestra instancia
         titulo: 'Bienvenido al curso de Vue JS 2'
     },
-    methods: {
+    methods: { // hook de declaración de metodos
         mostrarTitulo() {
             return 'Introducción a Vue js'
         }
     },
+    /** Ciclo de Vida
+     * Nos ayuda a manipular nuestro componente
+     * Desde trear informacion antes de que se carge el componente
+     * hasta provocar la destrucción del mismo manualmente
+     */
     beforeCreate() {
         console.log('Antes de crear')
     },
     created() {
         console.log('Creado')
-        // this.$destroy()
+        // this.$destroy() // manera de llamar manualmente a un hook especifico. `$` indica que es no es un método propio
     },
     beforeMount() {
         console.log('Antes de montar')
