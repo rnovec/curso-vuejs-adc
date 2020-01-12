@@ -22,8 +22,13 @@ El presente repositorio es una recopilación de pequeños proyectos realizados c
 - [Nuxt.js](https://nuxtjs.org/)
 - [Vue Composition API](https://vue-composition-api-rfc.netlify.com/)
 
-# Librerias externas
-- [Axios](https://www.npmjs.com/package/axios)
+# Recursos para el curso
+- [VSCode](https://code.visualstudio.com/download)
+- [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5)
+- [CSS3](https://www.ecured.cu/CSS3)
+- [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript)
+- [JS version support](https://www.w3schools.com/js/js_versions.asp)
+- [Fetch API](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
 
 # Recursos adicionales
 * [Element UI](https://element.eleme.io/#/es)
