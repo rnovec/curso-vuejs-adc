@@ -1,6 +1,3 @@
-<p align="center">
-  <img width="320" src="./assets/banner.png">
-</p>
 
 # Vue.js
 ![](http://tutorialesenpdf.com/wp-content/uploads/2018/05/vuejs-tutorial-pdf.jpg)
@@ -26,6 +23,7 @@ El presente repositorio es una recopilación de pequeños proyectos realizados c
 - [VSCode](https://code.visualstudio.com/download)
 - [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5)
 - [CSS3](https://www.ecured.cu/CSS3)
+- [GRID SYSTEM](https://www.w3schools.com/css/css_grid.asp)
 - [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript)
 - [JS version support](https://www.w3schools.com/js/js_versions.asp)
 - [Fetch API](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
