@@ -6,7 +6,7 @@ home: true
 heroImage: https://imagesadc.s3.amazonaws.com/eventos/VueLaptop.png
 tagline: ''
 actionText: Empezar →
-actionLink: /guide/
+actionLink: /core/
 features:
 - title: Introducción
   details: Conceptos básicos & Vue.js Core

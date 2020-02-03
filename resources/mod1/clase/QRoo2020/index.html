@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+    <!--
+        
+        <h1>{{ message }}</h1>
+    <p>{{ active ? 'Hola' : '' }}</p>
+-->
+    <ul>
+        <li v-for="item in products">
+            {{ item.quantity }} - {{ item.name }}
+            <span :class="item.quantity == 0 ? 'danger' : 'success'" 
+            v-text="item.quantity == 0 ? 'AGOTADO' : 'DISPONIBLE'"></span>
+            <button v-on:click="addStock(item)">Agregar</button>
+            <button @click="item.quantity--">Disminuir</button>
+        </li>
+    </ul>
+    Total: {{ total }}
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
