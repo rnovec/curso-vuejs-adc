@@ -44,8 +44,8 @@ module.exports = {
         link: '/vuex/',
       },
       {
-        text: 'Recursos',
-        link: '/config/'
+        text: 'Github',
+        link: 'https://github.com/RaulNovelo/curso-vuejs-adc'
       },
       {
         text: 'ADC',
@@ -60,6 +60,7 @@ module.exports = {
           children: [
             '',
             'essentials',
+            'resources',
           ]
         }
       ],

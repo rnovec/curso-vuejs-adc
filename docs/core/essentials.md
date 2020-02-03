@@ -69,38 +69,39 @@ Using v-for with a component:
 :product="item" :key="item.id">
 ```
 
-## ACTIONS / EVENTS
+## Actions / Events
 
 `v-on`
-Calls addToCart method on component:
+Llamar al método `addToCart`:
 ```html
 <button v-on:click="addToCart">...</button>
 <!-- shorthand -->
 <button @click="addToCart">...</button>
 ```
 
-Arguments can be passed:
+Se pueden pasar argumentos:
 ```html
 <button @click="addToCart(product)">...
 ```
-To prevent default behavior (e.g. page reload):
+Para evitar el comportamiento predeterminado (por ejemplo, recarga de página):
 ```html
 <form @submit.prevent="addProduct">...
 ```
 
-Only trigger once:
+Solo se dispara una vez:
 ```html
 <img @mouseover.once="showImage">...
 ```
-`.stop` Stop all event propagation
+`.stop` Detener toda propagación de eventos
 
-`.self` Only trigger if event.target is element itself
+`.self` Solo se dispara si event.target es el elemento mismo
 
 Keyboard entry example:
+```html
 <input @keyup.enter="submit">
 Call onCopy when control-c is pressed:
 <input @keyup.ctrl.c="onCopy">
-
+```
 
 Key modifiers:
 `.tab`
@@ -118,5 +119,53 @@ Key modifiers:
 `.right` 
 `.middle`
 
-## Hooks
+## Computed Properties
+
+```js
+var app = new Vue({
+el: '#app’,  
+  data: { 
+    x: 0,
+    y: 0
+  },
+  computed: {
+    total() {
+      return this.x + this.y
+    }
+  }
+})
+```
+
+## Componentes
+
+```js
+Vue.component('lista-tareas', {
+  name: '',
+  template: `
+        <ul class="list-group">
+            <li v-for="(tarea, indice) of tareas" class="list-group-item" 
+               v-bind:class="{terminada: tarea.terminada }">
+                {{ tarea.texto }}
+                <span class="pull-right">
+                    <button type="button" class="btn btn-success btn-xs glyphicon glyphicon-ok"
+                        v-on:click="tarea.terminada = !tarea.terminada"
+                    ></button>
+                    <button type="button" class="btn btn-danger btn-xs glyphicon glyphicon-remove"
+                        v-on:click="borrar(indice)"
+                    ></button>
+                </span>
+            </li>
+        </ul>
+    `,
+  data: () => { // ahora data debe ser una función que retorne un objeto
+    return {}
+  },
+  props: '',
+  filter: {},
+  watch: {},
+  methods: {},
+  computed: {}
+})
+```
+
 ### [Computed Properties](https://vuejs.org/v2/guide/computed.html)
