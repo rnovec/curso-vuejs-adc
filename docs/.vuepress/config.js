@@ -8,6 +8,8 @@ module.exports = {
    */
   description: 'Material de apoyo para el curso',
 
+  base: '/curso-vuejs-adc/',
+
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
