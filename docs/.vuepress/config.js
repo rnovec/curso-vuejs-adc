@@ -64,6 +64,15 @@ module.exports = {
           ]
         }
       ],
+      '/cli/': [
+        {
+          title: 'Vue CLI',
+          collapsable: false,
+          children: [
+            ''
+          ]
+        }
+      ],
       '/vuex/': [
         {
           title: 'Vuex',
