@@ -70,9 +70,13 @@ export default {
 
 ```
 
-## Useful links
+## Plugins
+    $ vue add <PLUGIN>
+
+## Recursos
 
 - [Babel](https://babeljs.io/)
 - [ESLint](https://eslint.org/)
 - [Vue Plugins](https://awesomejs.dev/for/vue-cli/)
+- [Icons](https://www.w3schools.com/icons/fontawesome_icons_intro.asp)
 
