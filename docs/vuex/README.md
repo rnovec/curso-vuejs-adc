@@ -1,25 +1,21 @@
 # Vuex Introduction
-Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion. It also integrates with Vue's official devtools extension to provide advanced features such as zero-config time-travel debugging and state snapshot export / import.
+Vuex es un patrón de gestión de estado + biblioteca para aplicaciones Vue.js. Sirve como una tienda centralizada para todos los componentes de una aplicación, con reglas que aseguran que el estado solo pueda mutarse de manera predecible. También se integra con la extensión de devtools oficial de Vue para proporcionar funciones avanzadas como la depuración de viaje en el tiempo de configuración cero y la exportación / importación de instantáneas de estado.
 
 ![](https://miro.medium.com/max/3300/1*ROtQY0XW1itY-76_ufVHww.png)
 
-# Why vuex?
-Vuex helps us deal with shared state management with the cost of more concepts and boilerplate. It's a trade-off between short term and long term productivity.
+# ¿Por qué vuex?
+Vuex nos ayuda a lidiar con la administración de estado compartida con el costo de más conceptos y repeticiones. Es una compensación entre la productividad a corto y largo plazo.
 ![](https://vuex.vuejs.org/flow.png)
 
-## Normal Vue.js flow
-
-![](https://vuejs.org/images/lifecycle.png)
-
-## Comminicate components
-- Parents send data to the child through props
-- the child sends data to the parents through events
-- Or use the data bus with events
+## Componentes conminutos
+- Los padres envían datos al niño a través de accesorios
+- el niño envía datos a los padres a través de eventos
+- O use el bus de datos con eventos
 
 
 ## When to use vuex?
 
-If you've never built a large-scale SPA and jump right into Vuex, it may feel verbose and daunting. That's perfectly normal - if your app is simple, you will most likely be fine without Vuex. A simple store pattern may be all you need. But if you are building a medium-to-large-scale SPA, chances are you have run into situations that make you think about how to better handle state outside of your Vue components, and Vuex will be the natural next step for you. There's a good quote from Dan Abramov, the author of Redux:
+Si nunca ha construido un SPA a gran escala y se lanza directamente a Vuex, puede parecer vergonzoso y desalentador. Eso es perfectamente normal: si su aplicación es simple, lo más probable es que esté bien sin Vuex. Un patrón de tienda simple puede ser todo lo que necesita. Pero si está construyendo un SPA de mediana a gran escala, es probable que se haya topado con situaciones que lo hagan pensar en cómo manejar mejor el estado fuera de sus componentes Vue, y Vuex será el próximo paso natural para usted. Hay una buena cita de Dan Abramov, el autor de Redux:
 > Flux libraries are like glasses: you’ll know when you need them.
 
 ## How to start we

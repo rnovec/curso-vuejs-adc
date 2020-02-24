@@ -44,6 +44,10 @@ module.exports = {
         link: '/vuex/',
       },
       {
+        text: 'AscoMusic',
+        link: '/project/',
+      },
+      {
         text: 'Github',
         link: 'https://github.com/RaulNovelo/curso-vuejs-adc'
       },
@@ -69,13 +73,24 @@ module.exports = {
           title: 'Vue CLI',
           collapsable: false,
           children: [
-            ''
+            '',
+            'custom',
+            'router'
           ]
         }
       ],
       '/vuex/': [
         {
           title: 'Vuex',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        }
+      ],
+      '/project/': [
+        {
+          title: 'AscoMusic',
           collapsable: false,
           children: [
             '',

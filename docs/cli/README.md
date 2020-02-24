@@ -80,3 +80,6 @@ export default {
 - [Vue Plugins](https://awesomejs.dev/for/vue-cli/)
 - [Icons](https://www.w3schools.com/icons/fontawesome_icons_intro.asp)
 
+# Clase
+[Lista de tareas](https://github.com/RaulNovelo/curso-vuejs-adc/tree/master/resources/mod2)
+
