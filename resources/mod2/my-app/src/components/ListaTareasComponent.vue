@@ -1,25 +1,24 @@
 <template>
   <ul class="list-group">
     <li
-      v-for="(tarea, index) in tareas"
-      :key="index"
-      :class="{ terminada: tarea.terminada }"
+      v-for="(tarea, indice) of tareas"
       class="list-group-item"
+      v-bind:class="{ terminada: tarea.terminada }"
     >
       {{ tarea.texto }}
       <span class="pull-right">
         <button
           type="button"
-          @click="tarea.terminada = !tarea.terminada"
           class="btn btn-success btn-sm"
+          v-on:click="terminada(tarea)"
         >
           <i class="fa fa-check"></i>
         </button>
         &nbsp;
         <button
           type="button"
-          @click="borrarTarea(index)"
           class="btn btn-danger btn-sm"
+          v-on:click="borrar(indice)"
         >
           <i class="fa fa-times"></i>
         </button>
@@ -29,22 +28,23 @@
 </template>
 
 <script>
+import { bus } from "../main.js";
 export default {
-  props: {
-    tareas: {
-      type: Array,
-      default: () => []
-    }
-  },
+  props: ["tareas"],
   methods: {
-    borrarTarea(index) {
-      this.tareas.splice(index, 1);
+    borrar: function(indice) {
+      this.tareas.splice(indice, 1);
+      bus.actualizarContador(this.tareas.length);
+    },
+    terminada(tarea) {
+      tarea.terminada = !tarea.terminada
+      bus.actualizarContador(--this.tareas.length);
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
 .terminada {
   color: gray;
   text-decoration: line-through;

@@ -1,4 +1,4 @@
-# miapp
+# my-app
 
 ## Project setup
 ```

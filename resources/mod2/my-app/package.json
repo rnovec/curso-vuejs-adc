@@ -1,5 +1,5 @@
 {
-  "name": "miapp",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,9 +23,5 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-bootstrap-vue": "^0.6.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }
