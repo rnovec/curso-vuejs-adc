@@ -44,6 +44,10 @@ module.exports = {
         link: '/vuex/',
       },
       {
+        text: 'Advanced',
+        link: '/advanced/',
+      },
+      {
         text: 'AscoMusic',
         link: '/project/',
       },
@@ -74,7 +78,6 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'custom',
             'router'
           ]
         }
@@ -88,12 +91,24 @@ module.exports = {
           ]
         }
       ],
+      '/advanced/': [
+        {
+          title: 'Conceptos Avanzados',
+          collapsable: false,
+          children: [
+            '',
+            'production',
+          ]
+        }
+      ],
       '/project/': [
         {
           title: 'AscoMusic',
           collapsable: false,
           children: [
             '',
+            'views',
+            'api',
           ]
         }
       ],

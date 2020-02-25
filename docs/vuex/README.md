@@ -7,26 +7,61 @@ Vuex es un patrón de gestión de estado + biblioteca para aplicaciones Vue.js. 
 Vuex nos ayuda a lidiar con la administración de estado compartida con el costo de más conceptos y repeticiones. Es una compensación entre la productividad a corto y largo plazo.
 ![](https://vuex.vuejs.org/flow.png)
 
-## Componentes conminutos
-- Los padres envían datos al niño a través de accesorios
-- el niño envía datos a los padres a través de eventos
-- O use el bus de datos con eventos
+## Comunicación entre componentes
+- El padre envían datos al hijo a través de props
+- Los hijos envía datos a los padres a través de eventos
+- Bus de datos
 
 
-## When to use vuex?
+## ¿Cuando usar Vuex?
 
 Si nunca ha construido un SPA a gran escala y se lanza directamente a Vuex, puede parecer vergonzoso y desalentador. Eso es perfectamente normal: si su aplicación es simple, lo más probable es que esté bien sin Vuex. Un patrón de tienda simple puede ser todo lo que necesita. Pero si está construyendo un SPA de mediana a gran escala, es probable que se haya topado con situaciones que lo hagan pensar en cómo manejar mejor el estado fuera de sus componentes Vue, y Vuex será el próximo paso natural para usted. Hay una buena cita de Dan Abramov, el autor de Redux:
-> Flux libraries are like glasses: you’ll know when you need them.
 
-## How to start we
-      state.count++
-    }
-  }
+> *Flux libraries are like glasses: you’ll know when you need them.*
+
+## ¿Como empezar?
+
+```js
+// store.js
+import Vue from "vue"
+import Vuex from "vuex"
+
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  state: {
+    tareas: [
+      {
+        texto: "Aprender Vue.js",
+        terminada: false
+      },
+      {
+        texto: "Aprender Angular 2",
+        terminada: false
+      },
+      {
+        texto: "Aprender Ionic 2",
+        terminada: false
+      }
+    ]
+  },
+  getters: {
+    numTareas: state =>
+      state.tareas.reduce((accumulator, tarea) => {
+        if (!tarea.terminada) ++accumulator
+        return accumulator
+      }, 0)
+  },
+  mutations: {},
+  actions: {}
 })
+
+export default store
+
 ```
 
 
-# ACTIONS => DISPATCH
+# Actions & Mutations
 ```js
 const store = new Vuex.Store({
   state: {
@@ -44,7 +79,7 @@ const store = new Vuex.Store({
   }
 })
 ```
-# MODULES & NAMESPACES
+# Módulos & Namespaces
 
 ```js
 const moduleA = {
@@ -72,6 +107,35 @@ store.state.b // -> `moduleB`'s state
 ```
 
 ![](https://vuex.vuejs.org/vuex.png)
-## How access to STORE?
-- GLOBAL
-- MODULE IMPORTS
+
+## ¿Como se accede al Store?
+- Global
+  - template
+  ```html
+  <template>
+    <h1>{{ $store.state.count }}</h1>
+  </template>
+  ```
+  - script
+  ```js
+  export default {
+    created() {
+      this.$store.state.count
+      this.$store.commit('some-mutations')
+      this.$store.dispatch('some-action')
+    }
+  }
+  ```
+
+- Desde los módulos de vuex
+  ```js
+  import { mapState, mapActions, mapMutations } from 'vuex'
+  export default {
+    computed: {
+      ...mapState(['tareas']) // se mezcla con las computed y data
+    },
+    created() {
+      this.tareas // como is fuera un variable de instancia
+    }
+  }
+  ```
