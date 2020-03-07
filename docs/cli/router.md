@@ -31,3 +31,7 @@ export default router;
 # Peticiones HTTP
 
     $ npm i axios
+
+
+## Recursos
+[Lista de Tareas](https://github.com/ascodecodigo/TodoList/releases/tag/v2.1.0)

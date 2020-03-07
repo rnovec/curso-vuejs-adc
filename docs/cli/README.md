@@ -81,5 +81,5 @@ export default {
 - [Icons](https://www.w3schools.com/icons/fontawesome_icons_intro.asp)
 
 # Clase
-[Lista de tareas](https://github.com/RaulNovelo/curso-vuejs-adc/tree/master/resources/mod2)
+[Lista de tareas](https://github.com/ascodecodigo/TodoList/releases/tag/v2.0.0)
 

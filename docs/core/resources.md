@@ -5,4 +5,4 @@
 - [Product Detail](https://github.com/RaulNovelo/curso-vuejs-adc/blob/master/resources/mod1/clase/ProductDetail.zip)
 
 ## Tarea
-- [Lista de tareas](https://github.com/RaulNovelo/curso-vuejs-adc/tree/master/resources/mod1/lista-tareas.zip)
+- [Lista de tareas](https://github.com/ascodecodigo/TodoList/releases/tag/v1.0.0)
